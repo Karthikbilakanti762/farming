@@ -74,6 +74,11 @@ def generate_prediction_plot(filepath, predicted_label, ground_truth_label):
 
 # === Routes for Deep Learning Model ===
 @app.route("/predict", methods=["POST"])
+def home():
+    return "Flask API for Crop Prediction is running!"
+
+
+
 def predict():
     data = request.get_json()
     filename = data.get("filename")
